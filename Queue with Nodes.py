@@ -2,7 +2,7 @@
 """
 Created on Sun Mar 24 10:34:15 2019
 
-@author: carte
+@author: carter
 """
 class Node:
     def __init__(self, value):
@@ -35,7 +35,7 @@ class Queue:
         else:
             print("Empty")
 
-    def is_Empty(self):
+    def is_empty(self):
         if self.head is None and self.tail is None:
             return True
         else:
