@@ -2,13 +2,12 @@
 """
 Created on Sun Mar 24 10:34:15 2019
 
-@author: carter
+@author: carte
 """
 class Node:
     def __init__(self, value):
         self.data = value
         self.front = None
-
 
 class Queue:
     def __init__(self):
@@ -28,12 +27,25 @@ class Queue:
         self.tail = new_node
         self.count += 1
 
+
     def de_queue(self):
         if not self.is_empty():
-            self.head = self.head.front
+
+            data = self.head.data
+
+            if self.count > 1:
+                self.head = self.head.front
+
+            else:
+                self.head = None
+                self.tail = None
+
             self.count -= 1
+            return data
+
         else:
             print("Empty")
+
 
     def is_empty(self):
         if self.head is None and self.tail is None:
@@ -43,5 +55,3 @@ class Queue:
 
     def size(self):
         return self.count
-    
-
